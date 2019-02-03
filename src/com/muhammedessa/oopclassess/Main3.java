@@ -3,48 +3,42 @@ package com.muhammedessa.oopclassess;
 
 import java.util.Date;
 
-//Creating multiple objects by one type only
+class Bank extends Account{
 
-
-
-
-//where we deposit and withdraw amount from our account.  
-//Creating an Account class which has deposit() and withdraw() methods
-
-
+	@Override
+	void insert(int a, String n, float amt) {
+		setacc_no(a);
+		setname(n); 
+		setamount(amt);
+		setDate();
 		
+	}      // Inheritance & abstract
+	
+}	
 public class Main3 {
 	
 	public static void main(String[] args){ 
-		System.out.println("Welcome to the ATM: Press any key to continue\n");
-		//make private variables
-
-		Account ac=new Account(); // Create an account object   
-		ac.insert(832345,"Muhammed",3000);  
-		ac.display();  
-		ac.checkBalance();  
-		ac.deposit(40000);  
-		ac.checkBalance();  
-		ac.withdraw(15000);  
-		ac.checkBalance();
-		Date date = new Date();
+		System.out.println("Welcome to the ATM \n");
+		                        //make private variables
+	     //  I can't Create an account object directly with out use Inheritance 
+		Bank b = new Bank(); 
+		
+		b.insert(832345,"Muhammed",3000);  
+		b.display();  
+		b.checkBalance();  
+		b.deposit(40000);  
+		b.checkBalance();  
+		b.withdraw(15000);  
+		b.checkBalance();
+		
+		Date date = new Date();             // Create object Date
 		System.out.printf( "Current Date/time: %tc", date );
 		 
-        // Â‰« ﬁ„‰« »⁄—÷ «· «—ÌŒ ›ﬁÿ
+                                            // Â‰« ﬁ„‰« »⁄—÷ «· «—ÌŒ ›ﬁÿ
         System.out.printf( "\nCurrent Date: %tF", date );
  
-        // Â‰« ﬁ„‰« »⁄—÷ «·Êﬁ  ›ﬁÿ
+                                            // Â‰« ﬁ„‰« »⁄—÷ «·Êﬁ  ›ﬁÿ
         System.out.printf( "\nCurrent time: %tr", date );
-   
-      
-         
-
-		
-		
-		
-		
-		
-		//date time
 		
 		}
 
